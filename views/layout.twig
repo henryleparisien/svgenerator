@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 223.87 555.03" style="enable-background:new 0 0 223.87 555.03;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E1EDF9;}
+	.st1{fill:#EFF9FE;}
+	.st2{fill:#008FD5;}
+	.st3{opacity:0.1;fill:#008FD5;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:0.9284;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;}
+	.st6{font-family:'GothamXNarrow-Bold';}
+	.st7{font-size:8.75px;}
+	.st8{font-family:'StagSans-Light';}
+	.st9{font-size:5.5px;}
+	.st10{fill:#F68B1F;}
+	.st11{font-family:'GothamNarrow-Medium';}
+	.st12{font-size:21.333px;}
+	.st13{font-size:14px;}
+	.st14{font-family:'GothamNarrow-Bold';}
+	.st15{font-size:16px;}
+	.st16{font-family:'GothamXNarrow-BookItalic';}
+	.st17{font-family:'GothamXNarrow-Book';}
+	.st18{font-family:'GothamNarrow-Book';}
+</style>
+<g>
+	<rect x="0.54" y="66.42" class="st0" width="223.33" height="14.05"/>
+  {% set y = 80.47 %}
+  {% set c = 0 %}
+{% for key, ville in donnees %}
+  {% if c  is odd  %}
+    {% set class = "st0" %}
+  {% else %}
+    {% set class = "st1" %}
+  {% endif %}
+      <rect x="0.54" y="{{ y }}" class="{{ class }}" width="223.33" height="12.29"/>
+      {% set y = y + 12.3 %}
+      {% set c = c +1 %}
+	  
+{% endfor %}
+{% set hauteur = c * 12.3 + 85 %}
+</g>
+<rect x="0.54" y="45.75" class="st2" width="223.33" height="20.68"/>
+<!--<rect x="96.38" y="66.31" class="st3" width="41.99" height="481.78"/>-->
+<g>
+	<line class="st4" x1="96.26" y1="43.96" x2="96.26" y2="548.88"/>
+	<line class="st4" x1="138.82" y1="43.96" x2="138.82" y2="548.88"/>
+	<line class="st4" x1="181.37" y1="43.96" x2="181.37" y2="548.88"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 100.3306 58.5672)" class="st5 st6 st7">Prix du m</text>
+	<text transform="matrix(0.583 0 0 0.583 134.1577 55.6537)" class="st5 st6 st7">2</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 140.7769 54.7845)"><tspan x="0" y="0" class="st5 st6 st7">évolution </tspan>
+<tspan x="0.51" y="9.75" class="st5 st6 st7">sur 3 mois</tspan>
+</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 183.7222 54.784)"><tspan x="0" y="0" class="st5 st6 st7">évolution </tspan>
+<tspan x="2.02" y="9.75" class="st5 st6 st7">sur 5 ans</tspan>
+</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 1.4977 {{ hauteur }})" class="st8 st9"> Source : Meilleursagents.com (données, 31 août 2019). </text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 180.7194 {{ hauteur }})" class="st8 st9">LP/infographie.</text>
+</g>
+<g>
+	<g>
+		<path class="st10" d="M34.34,17.17C34.34,7.69,26.65,0,17.17,0S0,7.69,0,17.17c0,3.7,1.18,7.12,3.18,9.93
+			C5.42,30.49,15.47,45.62,16,46.3c0.4,0.52,0.7,0.81,1.15,0.81c0.45,0,0.79-0.26,1.15-0.81c0.46-0.71,9.96-14.86,12.59-18.85
+			C33.05,24.59,34.34,21.03,34.34,17.17z"/>
+		<circle class="st5" cx="17.17" cy="17.17" r="13.57"/>
+	</g>
+	<text transform="matrix(1 0 0 1 5.6337 24.4263)" class="st10 st11 st12">{{ departement }}</text>
+</g>
+<!--
+{ departement:dep, nom_dep:nom_dep,headers: headers,donnees: donnees }
+
+-->
+<text transform="matrix(0.9069 0 0 1 38.8459 15.4252)" class="st10 st11 st13">{{ nom_dep }}</text>
+<g>
+	<text transform="matrix(0.9069 0 0 1 38.4514 29.6345)" class="st14 st15">Les prix par commune</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 25.6663 41.0971)" class="st16 st7">Prix des appartements dans l’ancien.</text>
+</g>
+<g>
+
+{% set y = 76.9193 %}
+{% for key, ville in donnees %}
+    	<text transform="matrix(1 0 0 1 2.2847 {{ y }})" class="st17 st7">{{ donnees[key][0] }}</text>
+      {% set y = y + 12.3 %}
+{% endfor %}
+</g>
+<g>
+
+{% set y = 0 %}
+<text transform="matrix(1 0 0 1 102.8511 77.3011)">
+  {% for key, ville in donnees %}
+        <tspan x="0" y="{{ y }}" class="st14 st7">{{ donnees[key][7] }}</tspan>
+        {% set y = y + 12.3 %}
+  {% endfor %}
+</text>
+
+</g>
+<g>
+
+{% set y = 0 %}
+<text transform="matrix(1 0 0 1 148.2278 77.3011)">
+  {% for key, ville in donnees %}
+        <tspan x="0" y="{{ y }}" class="st18 st7">{{ donnees[key][3] }}</tspan>
+        {% set y = y + 12.3 %}
+  {% endfor %}
+</text>
+</g>
+<g>
+
+{% set y = 0 %}
+<text transform="matrix(1 0 0 1 188.5771 77.3011)">
+  {% for key, ville in donnees %}
+        <tspan x="0" y="{{ y }}" class="st18 st7">{{ donnees[key][6] }}</tspan>
+        {% set y = y + 12.3 %}
+  {% endfor %}
+</text>
+
+</g>
+</svg>
