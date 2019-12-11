@@ -25,20 +25,20 @@
 </style>
 <g>
 	<rect x="0.54" y="66.42" class="st0" width="223.33" height="14.05"/>
-  {% set y = 80.47 %}
-  {% set c = 0 %}
-{% for key, ville in donnees %}
-  {% if c  is odd  %}
-    {% set class = "st0" %}
-  {% else %}
-    {% set class = "st1" %}
-  {% endif %}
-      <rect x="0.54" y="{{ y }}" class="{{ class }}" width="223.33" height="12.29"/>
-      {% set y = y + 12.3 %}
-      {% set c = c +1 %}
-	  
-{% endfor %}
-{% set hauteur = c * 12.3 + 85 %}
+	{% set y = 80.47 %}
+	{% set c = 0 %}
+	{% for key, ville in donnees %}
+	{% if c  is odd  %}
+		{% set class = "st0" %}
+	{% else %}
+		{% set class = "st1" %}
+	{% endif %}
+		<rect x="0.54" y="{{ y }}" class="{{ class }}" width="223.33" height="12.29"/>
+		{% set y = y + 12.3 %}
+		{% set c = c +1 %}
+		
+	{% endfor %}
+	{% set hauteur = c * 12.3 + 85 %}
 </g>
 <rect x="0.54" y="45.75" class="st2" width="223.33" height="20.68"/>
 <!--<rect x="96.38" y="66.31" class="st3" width="41.99" height="481.78"/>-->

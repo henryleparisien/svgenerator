@@ -3,7 +3,7 @@ var router = express.Router();
 var curl = require('curl');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/immo/ancien', function(req, res, next) {
 
   var SPREADSHEETS_API_KEY = 'AIzaSyALk_Si5ynAuYeAy85WA7kv7t6nMN_7O88';
   var ID = '11GNaVEWLgvyfRD-amNq3Nat6MbrGkoe7gv7EUdJl62U';
@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
     var headers= body.values[0][0];
     body.values.shift();
     var donnees = body.values;
-    console.log("MA DATA",);
+    console.log("MA DATA");
 
     var nom_dep = "paris";
 
